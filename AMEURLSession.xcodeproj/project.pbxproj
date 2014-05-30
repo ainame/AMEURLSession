@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11DD4160AD1B4CA99D52C220 /* libPods-AMEURLSessionTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B13B392C18EB498BA8E444F3 /* libPods-AMEURLSessionTests.a */; };
+		31B7F26C19385C2800A8DD93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B7F26B19385C2800A8DD93 /* Foundation.framework */; };
+		31B7F27A19385C2800A8DD93 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B7F27919385C2800A8DD93 /* XCTest.framework */; };
+		31B7F27B19385C2800A8DD93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B7F26B19385C2800A8DD93 /* Foundation.framework */; };
+		31B7F27D19385C2800A8DD93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B7F27C19385C2800A8DD93 /* UIKit.framework */; };
+		31B7F28019385C2800A8DD93 /* libAMEURLSession.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B7F26819385C2800A8DD93 /* libAMEURLSession.a */; };
+		31B7F28619385C2800A8DD93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31B7F28419385C2800A8DD93 /* InfoPlist.strings */; };
+		31B7F2A81938607C00A8DD93 /* AMESimpleTemporaryFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B7F2991938607C00A8DD93 /* AMESimpleTemporaryFileManager.m */; };
+		31B7F2A91938607C00A8DD93 /* AMEURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B7F29B1938607C00A8DD93 /* AMEURLRequestSerialization.m */; };
+		31B7F2AA1938607C00A8DD93 /* AMEURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B7F29D1938607C00A8DD93 /* AMEURLResponseSerialization.m */; };
+		31B7F2AB1938607C00A8DD93 /* AMEURLSessionDelegateComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B7F2A01938607C00A8DD93 /* AMEURLSessionDelegateComposer.m */; };
+		31B7F2AC1938607C00A8DD93 /* AMEURLSessionTaskCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B7F2A21938607C00A8DD93 /* AMEURLSessionTaskCreator.m */; };
+		31B7F2AD1938607C00A8DD93 /* AMEURLSessionURLLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B7F2A41938607C00A8DD93 /* AMEURLSessionURLLoader.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		31B7F27E19385C2800A8DD93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31B7F26019385C2800A8DD93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31B7F26719385C2800A8DD93;
+			remoteInfo = AMEURLSession;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		31B7F26619385C2800A8DD93 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		31B7F26819385C2800A8DD93 /* libAMEURLSession.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAMEURLSession.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		31B7F26B19385C2800A8DD93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		31B7F26F19385C2800A8DD93 /* AMEURLSession-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMEURLSession-Prefix.pch"; sourceTree = "<group>"; };
+		31B7F27819385C2800A8DD93 /* AMEURLSessionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AMEURLSessionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		31B7F27919385C2800A8DD93 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		31B7F27C19385C2800A8DD93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		31B7F28319385C2800A8DD93 /* AMEURLSessionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AMEURLSessionTests-Info.plist"; sourceTree = "<group>"; };
+		31B7F28519385C2800A8DD93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		31B7F2981938607C00A8DD93 /* AMESimpleTemporaryFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMESimpleTemporaryFileManager.h; sourceTree = "<group>"; };
+		31B7F2991938607C00A8DD93 /* AMESimpleTemporaryFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMESimpleTemporaryFileManager.m; sourceTree = "<group>"; };
+		31B7F29A1938607C00A8DD93 /* AMEURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMEURLRequestSerialization.h; sourceTree = "<group>"; };
+		31B7F29B1938607C00A8DD93 /* AMEURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMEURLRequestSerialization.m; sourceTree = "<group>"; };
+		31B7F29C1938607C00A8DD93 /* AMEURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMEURLResponseSerialization.h; sourceTree = "<group>"; };
+		31B7F29D1938607C00A8DD93 /* AMEURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMEURLResponseSerialization.m; sourceTree = "<group>"; };
+		31B7F29E1938607C00A8DD93 /* AMEURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMEURLSession.h; sourceTree = "<group>"; };
+		31B7F29F1938607C00A8DD93 /* AMEURLSessionDelegateComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMEURLSessionDelegateComposer.h; sourceTree = "<group>"; };
+		31B7F2A01938607C00A8DD93 /* AMEURLSessionDelegateComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMEURLSessionDelegateComposer.m; sourceTree = "<group>"; };
+		31B7F2A11938607C00A8DD93 /* AMEURLSessionTaskCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMEURLSessionTaskCreator.h; sourceTree = "<group>"; };
+		31B7F2A21938607C00A8DD93 /* AMEURLSessionTaskCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMEURLSessionTaskCreator.m; sourceTree = "<group>"; };
+		31B7F2A31938607C00A8DD93 /* AMEURLSessionURLLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMEURLSessionURLLoader.h; sourceTree = "<group>"; };
+		31B7F2A41938607C00A8DD93 /* AMEURLSessionURLLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMEURLSessionURLLoader.m; sourceTree = "<group>"; };
+		A4D17BE40A884FA7ABED0536 /* Pods-AMEURLSessionTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMEURLSessionTests.xcconfig"; path = "Pods/Pods-AMEURLSessionTests.xcconfig"; sourceTree = "<group>"; };
+		B13B392C18EB498BA8E444F3 /* libPods-AMEURLSessionTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AMEURLSessionTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD8816E0193976F4001C4D64 /* AMEURLSessionProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMEURLSessionProtocols.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31B7F26519385C2800A8DD93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31B7F26C19385C2800A8DD93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31B7F27519385C2800A8DD93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31B7F27A19385C2800A8DD93 /* XCTest.framework in Frameworks */,
+				31B7F27D19385C2800A8DD93 /* UIKit.framework in Frameworks */,
+				31B7F28019385C2800A8DD93 /* libAMEURLSession.a in Frameworks */,
+				31B7F27B19385C2800A8DD93 /* Foundation.framework in Frameworks */,
+				11DD4160AD1B4CA99D52C220 /* libPods-AMEURLSessionTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31B7F25F19385C2800A8DD93 = {
+			isa = PBXGroup;
+			children = (
+				31B7F26D19385C2800A8DD93 /* AMEURLSession */,
+				31B7F28119385C2800A8DD93 /* AMEURLSessionTests */,
+				31B7F26A19385C2800A8DD93 /* Frameworks */,
+				31B7F26919385C2800A8DD93 /* Products */,
+				A4D17BE40A884FA7ABED0536 /* Pods-AMEURLSessionTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		31B7F26919385C2800A8DD93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31B7F26819385C2800A8DD93 /* libAMEURLSession.a */,
+				31B7F27819385C2800A8DD93 /* AMEURLSessionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31B7F26A19385C2800A8DD93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31B7F26B19385C2800A8DD93 /* Foundation.framework */,
+				31B7F27919385C2800A8DD93 /* XCTest.framework */,
+				31B7F27C19385C2800A8DD93 /* UIKit.framework */,
+				B13B392C18EB498BA8E444F3 /* libPods-AMEURLSessionTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		31B7F26D19385C2800A8DD93 /* AMEURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				31B7F29119385CB300A8DD93 /* Classes */,
+				31B7F26E19385C2800A8DD93 /* Supporting Files */,
+			);
+			path = AMEURLSession;
+			sourceTree = "<group>";
+		};
+		31B7F26E19385C2800A8DD93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				31B7F26F19385C2800A8DD93 /* AMEURLSession-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		31B7F28119385C2800A8DD93 /* AMEURLSessionTests */ = {
+			isa = PBXGroup;
+			children = (
+				31B7F28219385C2800A8DD93 /* Supporting Files */,
+			);
+			path = AMEURLSessionTests;
+			sourceTree = "<group>";
+		};
+		31B7F28219385C2800A8DD93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				31B7F28319385C2800A8DD93 /* AMEURLSessionTests-Info.plist */,
+				31B7F28419385C2800A8DD93 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		31B7F29119385CB300A8DD93 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				31B7F2981938607C00A8DD93 /* AMESimpleTemporaryFileManager.h */,
+				31B7F2991938607C00A8DD93 /* AMESimpleTemporaryFileManager.m */,
+				31B7F29A1938607C00A8DD93 /* AMEURLRequestSerialization.h */,
+				31B7F29B1938607C00A8DD93 /* AMEURLRequestSerialization.m */,
+				31B7F29C1938607C00A8DD93 /* AMEURLResponseSerialization.h */,
+				31B7F29D1938607C00A8DD93 /* AMEURLResponseSerialization.m */,
+				31B7F29E1938607C00A8DD93 /* AMEURLSession.h */,
+				31B7F29F1938607C00A8DD93 /* AMEURLSessionDelegateComposer.h */,
+				31B7F2A01938607C00A8DD93 /* AMEURLSessionDelegateComposer.m */,
+				31B7F2A11938607C00A8DD93 /* AMEURLSessionTaskCreator.h */,
+				31B7F2A21938607C00A8DD93 /* AMEURLSessionTaskCreator.m */,
+				31B7F2A31938607C00A8DD93 /* AMEURLSessionURLLoader.h */,
+				31B7F2A41938607C00A8DD93 /* AMEURLSessionURLLoader.m */,
+				BD8816E0193976F4001C4D64 /* AMEURLSessionProtocols.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		31B7F26719385C2800A8DD93 /* AMEURLSession */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31B7F28B19385C2800A8DD93 /* Build configuration list for PBXNativeTarget "AMEURLSession" */;
+			buildPhases = (
+				31B7F26419385C2800A8DD93 /* Sources */,
+				31B7F26519385C2800A8DD93 /* Frameworks */,
+				31B7F26619385C2800A8DD93 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AMEURLSession;
+			productName = AMEURLSession;
+			productReference = 31B7F26819385C2800A8DD93 /* libAMEURLSession.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		31B7F27719385C2800A8DD93 /* AMEURLSessionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31B7F28E19385C2800A8DD93 /* Build configuration list for PBXNativeTarget "AMEURLSessionTests" */;
+			buildPhases = (
+				078B085F81C14A7D8421EBD3 /* Check Pods Manifest.lock */,
+				31B7F27419385C2800A8DD93 /* Sources */,
+				31B7F27519385C2800A8DD93 /* Frameworks */,
+				31B7F27619385C2800A8DD93 /* Resources */,
+				6889DED82AFD459A82DE5F9A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31B7F27F19385C2800A8DD93 /* PBXTargetDependency */,
+			);
+			name = AMEURLSessionTests;
+			productName = AMEURLSessionTests;
+			productReference = 31B7F27819385C2800A8DD93 /* AMEURLSessionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		31B7F26019385C2800A8DD93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ainame;
+			};
+			buildConfigurationList = 31B7F26319385C2800A8DD93 /* Build configuration list for PBXProject "AMEURLSession" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 31B7F25F19385C2800A8DD93;
+			productRefGroup = 31B7F26919385C2800A8DD93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				31B7F26719385C2800A8DD93 /* AMEURLSession */,
+				31B7F27719385C2800A8DD93 /* AMEURLSessionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31B7F27619385C2800A8DD93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31B7F28619385C2800A8DD93 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		078B085F81C14A7D8421EBD3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6889DED82AFD459A82DE5F9A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-AMEURLSessionTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31B7F26419385C2800A8DD93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31B7F2AB1938607C00A8DD93 /* AMEURLSessionDelegateComposer.m in Sources */,
+				31B7F2AA1938607C00A8DD93 /* AMEURLResponseSerialization.m in Sources */,
+				31B7F2AC1938607C00A8DD93 /* AMEURLSessionTaskCreator.m in Sources */,
+				31B7F2A81938607C00A8DD93 /* AMESimpleTemporaryFileManager.m in Sources */,
+				31B7F2A91938607C00A8DD93 /* AMEURLRequestSerialization.m in Sources */,
+				31B7F2AD1938607C00A8DD93 /* AMEURLSessionURLLoader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31B7F27419385C2800A8DD93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31B7F27F19385C2800A8DD93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31B7F26719385C2800A8DD93 /* AMEURLSession */;
+			targetProxy = 31B7F27E19385C2800A8DD93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		31B7F28419385C2800A8DD93 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31B7F28519385C2800A8DD93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		31B7F28919385C2800A8DD93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		31B7F28A19385C2800A8DD93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		31B7F28C19385C2800A8DD93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AMEURLSession.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AMEURLSession/AMEURLSession-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		31B7F28D19385C2800A8DD93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AMEURLSession.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AMEURLSession/AMEURLSession-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		31B7F28F19385C2800A8DD93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4D17BE40A884FA7ABED0536 /* Pods-AMEURLSessionTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AMEURLSession/AMEURLSession-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AMEURLSessionTests/AMEURLSessionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		31B7F29019385C2800A8DD93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4D17BE40A884FA7ABED0536 /* Pods-AMEURLSessionTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AMEURLSession/AMEURLSession-Prefix.pch";
+				INFOPLIST_FILE = "AMEURLSessionTests/AMEURLSessionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		31B7F26319385C2800A8DD93 /* Build configuration list for PBXProject "AMEURLSession" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31B7F28919385C2800A8DD93 /* Debug */,
+				31B7F28A19385C2800A8DD93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31B7F28B19385C2800A8DD93 /* Build configuration list for PBXNativeTarget "AMEURLSession" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31B7F28C19385C2800A8DD93 /* Debug */,
+				31B7F28D19385C2800A8DD93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31B7F28E19385C2800A8DD93 /* Build configuration list for PBXNativeTarget "AMEURLSessionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31B7F28F19385C2800A8DD93 /* Debug */,
+				31B7F29019385C2800A8DD93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 31B7F26019385C2800A8DD93 /* Project object */;
+}
