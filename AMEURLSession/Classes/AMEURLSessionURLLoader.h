@@ -55,4 +55,8 @@
                                            parameters:(NSDictionary *)parameters
                                     completionHandler:(void (^)(NSURL *location, NSURLResponse *response, NSError *error))completionHandler;
 
+- (NSURLSession *)currentSession;
+
+- (NSURLSession *)currentBackgroundSessionWithCompletionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler;
+
 @end
