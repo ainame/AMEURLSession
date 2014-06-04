@@ -34,11 +34,10 @@ static NSString *const kAMECharactersToLeaveUnescapedInQueryStringPairKey = @"[]
 - (NSString *)queryStringWithParameters:(NSDictionary *)parameters
 {
     NSMutableArray *keyValuePairs = [NSMutableArray array];
-    [parameters enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
-        if (!stop) {
-            [keyValuePairs
-                addObject:[NSString stringWithFormat:@"%@=%@", [self.class encodeQueryKeyWithString:key], [self.class encodeQueryValueWithString:value]]];
-        }
+    [parameters enumerateKeysAndObjectsUsingBlock:^(NSString *key, id value, BOOL *stop) {
+        NSString *valueString = [self.class queryValueStringWith:value];
+        [keyValuePairs
+            addObject:[NSString stringWithFormat:@"%@=%@", [self.class encodeQueryKeyWithString:key], [self.class encodeQueryValueWithString:valueString]]];
     }];
     return [keyValuePairs componentsJoinedByString:@"&"];
 }
@@ -55,6 +54,11 @@ static NSString *const kAMECharactersToLeaveUnescapedInQueryStringPairKey = @"[]
     return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)string, NULL,
                                                                                  (__bridge CFStringRef)kAMECharactersToBeEscapedInQueryString,
                                                                                  CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
+}
+
++ (NSString *)queryValueStringWith:(id)value
+{
+    return [value description];
 }
 
 @end
