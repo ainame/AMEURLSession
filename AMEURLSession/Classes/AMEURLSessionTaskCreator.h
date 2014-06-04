@@ -37,6 +37,6 @@
                                            parameters:(NSDictionary *)parameters
                                     completionHandler:(void (^)(NSURL *location, NSURLResponse *response, NSError *error))completionHandler;
 
-- (NSURLRequest *)requestWithURL:(NSURL *)URL parameters:(NSDictionary *)parameters;
+- (NSURLRequest *)requestWithURL:(NSURL *)URL method:(NSString *)HTTPMethod parameters:(NSDictionary *)parameters;
 
 @end
