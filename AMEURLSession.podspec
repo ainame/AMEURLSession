@@ -7,14 +7,14 @@
 Pod::Spec.new do |s|
   s.name             = "AMEURLSession"
   s.version          = "0.1.1"
-  s.summary          = "AMEURLSession is a simple and customizable wrapper of around NSURLSession classes to easy using it without other client(AFNetworking, etc...)"
+  s.summary          = "AMEURLSession is a simple and customizable wrapper of around NSURLSession classes to easy using it without other client(AFNetworking, etc...)."
   s.description      = <<-DESC
-                       An optional longer description of AMEURLSession
+                       AMEURLSession is a simple and customizable wrapper of around NSURLSession classes to easy using it without other client(AFNetworking, etc...).
 
                        * Markdown format.
                        * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "http://EXAMPLE/NAME"
+  s.homepage         = "http://github.com/ainame/AMEURLSession"
   s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "ainame" => "s.namai.09@gmail.com" }
@@ -27,8 +27,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'AMEURLSession/Classes'
-  s.resources = 'Assets/*.png'
-
+  # s.resources = 'Assets/*.png'
   # s.ios.exclude_files = 'Classes/osx'
   # s.osx.exclude_files = 'Classes/ios'
   # s.public_header_files = 'Classes/**/*.h'
