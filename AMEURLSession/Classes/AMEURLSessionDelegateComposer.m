@@ -38,6 +38,17 @@
 }
 
 - (void)URLSession:(NSURLSession *)session
+                        task:(NSURLSessionTask *)task
+             didSendBodyData:(int64_t)bytesSent
+              totalBytesSent:(int64_t)totalBytesSent
+    totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend
+{
+    if (_taskDelegate) {
+        [_taskDelegate URLSession:session task:task didSendBodyData:bytesSent totalBytesSent:totalBytesSent totalBytesExpectedToSend:totalBytesExpectedToSend];
+    }
+}
+
+- (void)URLSession:(NSURLSession *)session
           downloadTask:(NSURLSessionDownloadTask *)downloadTask
      didResumeAtOffset:(int64_t)fileOffset
     expectedTotalBytes:(int64_t)expectedTotalBytes
