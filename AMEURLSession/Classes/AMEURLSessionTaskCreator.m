@@ -26,10 +26,7 @@
                                    parameters:(NSDictionary *)parameters
                             completionHandler:(void (^)(NSData *, NSURLResponse *, NSError *))completionHandler
 {
-    NSMutableURLRequest *mutableRequest = [[NSMutableURLRequest alloc] initWithURL:URL];
-    mutableRequest.HTTPMethod = method;
-
-    NSURLRequest *request = [self.requestSerializer serializeRequest:mutableRequest parameters:parameters];
+    NSURLRequest *request = [self requestWithURL:URL method:method parameters:parameters];
     return [session dataTaskWithRequest:request completionHandler:completionHandler];
 }
 
@@ -39,7 +36,7 @@
                                              data:(NSData *)data
                                 completionHandler:(void (^)(NSData *, NSURLResponse *, NSError *))completionHandler
 {
-    NSURLRequest *request = [self requestWithURL:URL parameters:parameters];
+    NSURLRequest *request = [self requestWithURL:URL method:@"POST" parameters:parameters];
     return [session uploadTaskWithRequest:request fromData:data completionHandler:completionHandler];
 }
 
@@ -49,7 +46,7 @@
                                                    parameters:(NSDictionary *)parameters
                                                       fileURL:(NSURL *)fileURL
 {
-    NSURLRequest *request = [self requestWithURL:URL parameters:parameters];
+    NSURLRequest *request = [self requestWithURL:URL method:@"POST" parameters:parameters];
     return [session uploadTaskWithRequest:request fromFile:fileURL];
 }
 
@@ -58,13 +55,14 @@
                                            parameters:(NSDictionary *)parameters
                                     completionHandler:(void (^)(NSURL *, NSURLResponse *, NSError *))completionHandler
 {
-    NSURLRequest *request = [self requestWithURL:URL parameters:parameters];
+    NSURLRequest *request = [self requestWithURL:URL method:@"GET" parameters:parameters];
     return [session downloadTaskWithRequest:request completionHandler:completionHandler];
 }
 
-- (NSURLRequest *)requestWithURL:(NSURL *)URL parameters:(NSDictionary *)parameters
+- (NSURLRequest *)requestWithURL:(NSURL *)URL method:(NSString *)HTTPmethod parameters:(NSDictionary *)parameters
 {
     NSMutableURLRequest *mutableRequest = [[NSMutableURLRequest alloc] initWithURL:URL];
+    mutableRequest.HTTPMethod = HTTPmethod;
     return [self.requestSerializer serializeRequest:mutableRequest parameters:parameters];
 }
 
