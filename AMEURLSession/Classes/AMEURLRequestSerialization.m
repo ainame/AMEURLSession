@@ -23,7 +23,7 @@ static NSString *const kAMECharactersToLeaveUnescapedInQueryStringPairKey = @"[]
     NSString *query = [self queryStringWithParameters:parameters];
 
     if ([@[ @"GET", @"HEAD", @"DELETE" ] containsObject:request.HTTPMethod]) {
-        mutableRequest.URL = [NSURL URLWithString:[[mutableRequest.URL absoluteString] stringByAppendingString:query]];
+        mutableRequest.URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", [mutableRequest.URL absoluteString], query]];
     } else {
         mutableRequest.HTTPBody = [query dataUsingEncoding:NSUTF8StringEncoding];
     }
