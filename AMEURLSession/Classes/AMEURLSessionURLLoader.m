@@ -57,6 +57,11 @@
                                                  URL:URL
                                           parameters:parameters
                                    completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                       if (error) {
+                                           completionHandler(task, nil, error);
+                                           return;
+                                       }
+
                                        NSError *serializeError;
                                        id responseObject = [self.responseSerializer responseObjectForResponse:response data:data error:&serializeError];
                                        completionHandler(task, responseObject, serializeError);
@@ -76,6 +81,10 @@
         NSURL *fileURL = [self.temporaryFileManager createFileWithData:data error:&fileWriteError];
         task = [self.sessionTaskCreator
             uploadTaskInBackgroundWithSession:[self currentBackgroundSessionWithCompletionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                  if (error) {
+                                                      completionHandler(task, nil, error);
+                                                      return;
+                                                  }
                                                   NSError *serializeError;
                                                   id responseObject =
                                                       [self.responseSerializer responseObjectForResponse:response data:data error:&serializeError];
@@ -93,6 +102,11 @@
                                                    parameters:parameters
                                                          data:data
                                             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                if (error) {
+                                                    completionHandler(task, nil, error);
+                                                    return;
+                                                }
+
                                                 NSError *serializeError;
                                                 id responseObject =
                                                     [self.responseSerializer responseObjectForResponse:response data:data error:&serializeError];
