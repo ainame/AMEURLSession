@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = "AMEURLSession"
-  s.version          = "0.1.2"
+  s.version          = "0.1.3"
   s.summary          = "AMEURLSession is a simple and customizable wrapper of around NSURLSession classes to easy using it without other client(AFNetworking, etc...)."
   s.description      = <<-DESC
                        AMEURLSession is a simple and customizable wrapper of around NSURLSession classes to easy using it without other client(AFNetworking, etc...).
