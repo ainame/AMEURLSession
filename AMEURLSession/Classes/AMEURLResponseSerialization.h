@@ -10,7 +10,7 @@
 
 @protocol AMEURLResponseSerialization <NSObject>
 
-- (id)responseObjectForResponse:(NSURLResponse *)response data:(NSData *)data error:(NSError *)error;
+- (id)responseObjectForResponse:(NSURLResponse *)response data:(NSData *)data error:(NSError *__autoreleasing *)error;
 
 @end
 

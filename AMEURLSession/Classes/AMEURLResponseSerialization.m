@@ -19,7 +19,7 @@
     return self;
 }
 
-- (id)responseObjectForResponse:(NSURLResponse *)response data:(NSData *)data error:(NSError *)error
+- (id)responseObjectForResponse:(NSURLResponse *)response data:(NSData *)data error:(NSError *__autoreleasing *)error
 {
     return data;
 }
@@ -28,7 +28,7 @@
 
 @implementation AMEURLResponseJSONSResponSerializer
 
-- (id)responseObjectForResponse:(NSURLResponse *)response data:(NSData *)data error:(NSError *)error
+- (id)responseObjectForResponse:(NSURLResponse *)response data:(NSData *)data error:(NSError *__autoreleasing *)error
 {
     NSStringEncoding stringEncoding = self.stringEncoding;
     if (response.textEncodingName) {
