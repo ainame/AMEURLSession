@@ -63,7 +63,13 @@
 {
     NSMutableURLRequest *mutableRequest = [[NSMutableURLRequest alloc] initWithURL:URL];
     mutableRequest.HTTPMethod = HTTPmethod;
-    return [self.requestSerializer serializeRequest:mutableRequest parameters:parameters];
+
+    NSError *serializeError;
+    NSURLRequest *serializedRequest = [self.requestSerializer requestBySerializingRequest:mutableRequest withParameters:parameters error:&serializeError];
+    if (serializeError) {
+        return nil;
+    }
+    return serializedRequest;
 }
 
 @end

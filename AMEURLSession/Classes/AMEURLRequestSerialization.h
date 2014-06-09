@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+// NOTE: this protocol have comaptibility to AFURLRequestSerialization protocol
 @protocol AMEURLRequestSerialization <NSObject>
 
-- (NSURLRequest *)serializeRequest:(NSURLRequest *)request parameters:(NSDictionary *)parameters;
+- (NSURLRequest *)requestBySerializingRequest:(NSURLRequest *)request withParameters:(id)parameters error:(NSError *__autoreleasing *)error;
 
 @end
 

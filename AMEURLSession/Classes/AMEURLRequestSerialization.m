@@ -13,7 +13,7 @@
 static NSString *const kAMECharactersToBeEscapedInQueryString = @":/?&=;+!@#$()',*";
 static NSString *const kAMECharactersToLeaveUnescapedInQueryStringPairKey = @"[].";
 
-- (NSURLRequest *)serializeRequest:(NSURLRequest *)request parameters:(NSDictionary *)parameters
+- (NSURLRequest *)requestBySerializingRequest:(NSURLRequest *)request withParameters:(id)parameters error:(NSError *__autoreleasing *)error
 {
     if (!parameters) {
         return request;
