@@ -33,7 +33,7 @@
                                delegateQueue:(NSOperationQueue *)delegateQueue
                         temporaryFileManager:(id<AMETemporaryFileManaging>)temporaryFileManager
 {
-    self = [self init];
+    self = [super init];
     if (self) {
         _configuration = configuration;
         _sessionDelegateComposer = sessionDelegateComposer;
