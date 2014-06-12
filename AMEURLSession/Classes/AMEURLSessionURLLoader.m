@@ -129,9 +129,6 @@
 
 - (NSURLSession *)currentSession
 {
-    if (_session) {
-        return _session;
-    }
     return _session = [NSURLSession sessionWithConfiguration:_configuration delegate:_sessionDelegateComposer delegateQueue:_delegateQueue];
 }
 
@@ -140,9 +137,6 @@
     // NOTE: NSURLSession's session delegate property has copy attributes.
     //       Then, this update completionHandler in this place.
     _sessionDelegateComposer.backgroundCompletionHandler = completionHandler;
-    if (_session) {
-        return _session;
-    }
     return _session = [NSURLSession sessionWithConfiguration:_configuration delegate:_sessionDelegateComposer delegateQueue:_delegateQueue];
 }
 
