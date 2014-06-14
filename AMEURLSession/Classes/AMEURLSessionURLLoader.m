@@ -129,15 +129,17 @@
 
 - (NSURLSession *)currentSession
 {
-    return _session = [NSURLSession sessionWithConfiguration:_configuration delegate:_sessionDelegateComposer delegateQueue:_delegateQueue];
+    AMEURLSessionDelegateComposer *copiedComposer = [_sessionDelegateComposer copy];
+    return _session = [NSURLSession sessionWithConfiguration:_configuration delegate:copiedComposer delegateQueue:_delegateQueue];
 }
 
 - (NSURLSession *)currentBackgroundSessionWithCompletionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))completionHandler
 {
     // NOTE: NSURLSession's session delegate property has copy attributes.
     //       Then, this update completionHandler in this place.
-    _sessionDelegateComposer.backgroundCompletionHandler = completionHandler;
-    return _session = [NSURLSession sessionWithConfiguration:_configuration delegate:_sessionDelegateComposer delegateQueue:_delegateQueue];
+    AMEURLSessionDelegateComposer *copiedComposer = [_sessionDelegateComposer copy];
+    copiedComposer.backgroundCompletionHandler = completionHandler;
+    return _session = [NSURLSession sessionWithConfiguration:_configuration delegate:copiedComposer delegateQueue:_delegateQueue];
 }
 
 @end
