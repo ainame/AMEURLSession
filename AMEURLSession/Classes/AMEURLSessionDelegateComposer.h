@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AMEURLSessionDelegateComposer : NSObject <NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDataDelegate, NSURLSessionDownloadDelegate>
+@interface AMEURLSessionDelegateComposer
+    : NSObject <NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDataDelegate, NSURLSessionDownloadDelegate, NSCopying>
 
 @property (nonatomic, weak) id<NSURLSessionDelegate> delegate;
 
@@ -19,6 +20,12 @@
 @property (nonatomic, weak) id<NSURLSessionDownloadDelegate> downloadDelegate;
 
 @property (nonatomic, copy) void (^backgroundCompletionHandler)(NSData *data, NSURLResponse *response, NSError *error);
+
+- (instancetype)initWithDelegate:(id<NSURLSessionDelegate>)delegate
+                    taskDelegate:(id<NSURLSessionTaskDelegate>)taskDelegate
+                    dataDelegate:(id<NSURLSessionDataDelegate>)dataDelegate
+                downloadDelegate:(id<NSURLSessionDownloadDelegate>)downloadDelegate
+     backgroundCompletionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))backgroundCompletionHandler;
 
 - (instancetype)initWithBackgroundCompletionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))backgroundCompletionHandler;
 

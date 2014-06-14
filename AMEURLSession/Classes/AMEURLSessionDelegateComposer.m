@@ -10,13 +10,31 @@
 
 @implementation AMEURLSessionDelegateComposer
 
-- (instancetype)initWithBackgroundCompletionHandler:(void (^)(NSData *, NSURLResponse *, NSError *))backgroundCompletionHandler
+- (instancetype)init
 {
-    self = [self init];
+    return [self initWithDelegate:nil taskDelegate:nil dataDelegate:nil downloadDelegate:nil backgroundCompletionHandler:nil];
+}
+
+- (instancetype)initWithDelegate:(id<NSURLSessionDelegate>)delegate
+                    taskDelegate:(id<NSURLSessionTaskDelegate>)taskDelegate
+                    dataDelegate:(id<NSURLSessionDataDelegate>)dataDelegate
+                downloadDelegate:(id<NSURLSessionDownloadDelegate>)downloadDelegate
+     backgroundCompletionHandler:(void (^)(NSData *data, NSURLResponse *response, NSError *error))backgroundCompletionHandler
+{
+    self = [super init];
     if (self) {
-        _backgroundCompletionHandler = backgroundCompletionHandler;
+        self.delegate = delegate;
+        self.taskDelegate = taskDelegate;
+        self.dataDelegate = dataDelegate;
+        self.downloadDelegate = downloadDelegate;
+        self.backgroundCompletionHandler = backgroundCompletionHandler;
     }
     return self;
+}
+
+- (instancetype)initWithBackgroundCompletionHandler:(void (^)(NSData *, NSURLResponse *, NSError *))backgroundCompletionHandler
+{
+    return [self initWithDelegate:nil taskDelegate:nil dataDelegate:nil downloadDelegate:nil backgroundCompletionHandler:backgroundCompletionHandler];
 }
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
@@ -78,6 +96,15 @@
                     totalBytesWritten:totalBytesWritten
             totalBytesExpectedToWrite:totalBytesExpectedToWrite];
     }
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return [[[self class] allocWithZone:zone] initWithDelegate:self.delegate
+                                                  taskDelegate:self.taskDelegate
+                                                  dataDelegate:self.dataDelegate
+                                              downloadDelegate:self.downloadDelegate
+                                   backgroundCompletionHandler:self.backgroundCompletionHandler];
 }
 
 @end
