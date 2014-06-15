@@ -7,22 +7,19 @@
 Pod::Spec.new do |s|
   s.name             = "AMEURLSession"
   s.version          = "0.1.7"
-  s.summary          = "AMEURLSession is a simple and customizable wrapper of around NSURLSession classes to easy using it without other client(AFNetworking, etc...)."
+  s.summary          = "AMEURLSession is a simple and customizable wrapper of around NSURLSession classes."
   s.description      = <<-DESC
                        AMEURLSession is a simple and customizable wrapper of around NSURLSession classes to easy using it without other client(AFNetworking, etc...).
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
                        DESC
   s.homepage         = "http://github.com/ainame/AMEURLSession"
-  s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  # s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "ainame" => "s.namai.09@gmail.com" }
   s.source           = { :git => "git@github.com:ainame/AMEURLSession.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ainame'
 
-  # s.platform     = :ios, '5.0'
-  # s.ios.deployment_target = '5.0'
+  s.platform     = :ios, '7.0'
+  s.ios.deployment_target = '7.0'
   # s.osx.deployment_target = '10.7'
   s.requires_arc = true
 
