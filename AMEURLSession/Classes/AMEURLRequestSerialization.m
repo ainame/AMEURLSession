@@ -26,6 +26,7 @@ static NSString *const kAMECharactersToLeaveUnescapedInQueryStringPairKey = @"[]
         mutableRequest.URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", [mutableRequest.URL absoluteString], query]];
     } else {
         mutableRequest.HTTPBody = [query dataUsingEncoding:NSUTF8StringEncoding];
+        [mutableRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     }
 
     return mutableRequest;
